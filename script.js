@@ -29,7 +29,7 @@ const datos = [
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 27
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 28
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 29
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" }   // Día 30
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },   // Día 30
 ];
 // Función para marcar los días con o sin datos
 function marcarDias() {
