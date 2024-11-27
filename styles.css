@@ -68,13 +68,14 @@ h1 {
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
+    position: relative; /* Añadido para el botón de cierre */
 }
 
 .close {
     color: #aaa;
     font-size: 30px;
     font-weight: bold;
-    position: absolute;
+    position: absolute; /* Posición fija dentro del modal */
     right: 20px;
     top: 10px;
 }
@@ -100,20 +101,13 @@ input {
     margin-top: 5px;
     padding: 8px;
     font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
+    border: none; /* Sin borde */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
+    outline: none; /* Sin contorno al hacer foco */
+    background-color: transparent; /* Fondo transparente */
+    color: #333; /* Color del texto */
 }
 
-button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+input::placeholder {
+    color: #aaa; /* Color del texto de los placeholders */
 }
