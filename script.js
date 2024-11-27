@@ -1,10 +1,10 @@
-// Datos de ejemplo para cada día (vacíos)
+// Datos de ejemplo para cada día
 const datos = [
-    { salida: "Si", acompanado: "No" },  // Día 1
-    { salida: "No", acompanado: "Si" },  // Día 2
-    { salida: "Si", acompanado: "Si" },  // Día 3
-    { salida: "No", acompanado: "No" },  // Día 4
-    { salida: "Si", acompanado: "No" }   // Día 5
+    { salida: "Sí", acompanado: "No", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "10" },
+    { salida: "No", acompanado: "Sí", donde: "Trabajo", comentarios: "Mucho trabajo", valoracion: "7" },
+    { salida: "Sí", acompanado: "No", donde: "Compras", comentarios: "Compré muchas cosas", valoracion: "8" },
+    { salida: "Sí", acompanado: "Sí", donde: "Parque", comentarios: "Fui con amigos", valoracion: "9" },
+    { salida: "No", acompanado: "No", donde: "Casa", comentarios: "Día tranquilo en casa", valoracion: "6" },
 ];
 
 // Función para actualizar la información en el modal
@@ -16,9 +16,14 @@ function abrirModal(dia) {
     // Obtener los datos del día seleccionado
     const diaDatos = datos[dia - 1];
 
-    // Actualizar los detalles en el modal con íconos
-    document.getElementById("salida").innerHTML = diaDatos.salida === "Si" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
-    document.getElementById("acompanado").innerHTML = diaDatos.acompanado === "Si" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
+    // Actualizar los detalles en el modal con íconos en Salida y Acompañado
+    document.getElementById("salida").innerHTML = diaDatos.salida === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
+    document.getElementById("acompanado").innerHTML = diaDatos.acompanado === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
+
+    // Los demás campos mostrarán texto normal
+    document.getElementById("donde").textContent = diaDatos.donde;
+    document.getElementById("comentarios").textContent = diaDatos.comentarios;
+    document.getElementById("valoracion").textContent = diaDatos.valoracion;
 }
 
 // Función para cerrar el modal
