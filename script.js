@@ -1,10 +1,10 @@
 // Datos de ejemplo para cada día
 const datos = [
-    { salida: "Sí", acompanado: "No", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "10" },
-    { salida: "No", acompanado: "Sí", donde: "Trabajo", comentarios: "Mucho trabajo", valoracion: "7" },
-    { salida: "Sí", acompanado: "No", donde: "Compras", comentarios: "Compré muchas cosas", valoracion: "8" },
-    { salida: "Sí", acompanado: "Sí", donde: "Parque", comentarios: "Fui con amigos", valoracion: "9" },
-    { salida: "No", acompanado: "No", donde: "Casa", comentarios: "Día tranquilo en casa", valoracion: "6" },
+    { salida: "Sí", acompanado: "Si", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "" },
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
     // Añadir más días si es necesario
 ];
 
