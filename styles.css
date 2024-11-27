@@ -74,7 +74,7 @@ h1 {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 55%; /* Modal más estrecha */
+    width: 60%; /* Modal más estrecha */
     max-width: 500px;
     border-radius: 8px;
     position: relative;
@@ -158,3 +158,60 @@ h2 {
 .arrow-link:hover {
     text-decoration: underline;
 }
+
+/* styles.css */
+.checkmark {
+    color: green; /* Color verde para el check */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cross {
+    color: red; /* Color rojo para la cruz */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Estilos generales */
+.data-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten mejor */
+    margin-bottom: 20px; /* Separación más grande entre las filas */
+    align-items: center;
+}
+
+/* Estilo de las etiquetas */
+.label {
+    font-weight: bold;
+    flex-basis: 40%; /* Ajusta el espacio que ocupa la etiqueta */
+    margin-right: 10px; /* Separación entre la etiqueta y el valor */
+}
+
+/* Estilo de los valores */
+.value {
+    flex-basis: 60%;
+    color: #fff; /* Texto blanco */
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los iconos */
+}
+
+/* Asegurarnos de que las etiquetas no se corten */
+@media (max-width: 768px) {
+    .data-row {
+        flex-direction: column; /* Apilar las filas de forma vertical */
+        align-items: flex-start; /* Alinear a la izquierda */
+        margin-bottom: 15px;
+    }
+
+    .label {
+        font-size: 16px; /* Reducir el tamaño de la fuente en móviles */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+
+    .value {
+        font-size: 18px; /* Reducir tamaño de los valores en móviles */
+    }
+}
+
