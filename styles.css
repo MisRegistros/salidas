@@ -26,24 +26,30 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Aseguramos que la tabla no se desborde en pantallas pequeñas */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    overflow-x: auto;
+    display: block; /* Permite desplazamiento horizontal en pantallas pequeñas */
 }
 
 table th, table td {
-    padding: 10px;
+    padding: 8px; /* Reducimos el espacio dentro de las celdas */
     border: 1px solid #ddd;
     text-align: center;
+    font-size: 14px; /* Tamaño de letra más pequeño para que entre todo */
 }
 
 input {
-    width: 90%;
+    width: 100%; /* Los inputs ahora ocuparán el 100% del espacio de la celda */
     padding: 5px;
     margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px; /* Reducimos el tamaño de la fuente en los inputs */
+    box-sizing: border-box; /* Para que el padding no haga que el input se desborde */
 }
 
 button {
@@ -56,8 +62,30 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    table th, table td {
+        font-size: 12px; /* Ajustamos el tamaño de fuente en pantallas pequeñas */
+        padding: 6px; /* Reducimos el padding para optimizar el espacio */
+    }
+
+    input {
+        font-size: 12px; /* Reducimos el tamaño de los inputs en móviles */
+        padding: 4px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
