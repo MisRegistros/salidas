@@ -198,6 +198,8 @@ h2 {
     align-items: center; /* Centra verticalmente los iconos */
 }
 
+
+
 /* Asegurarnos de que las etiquetas no se corten */
 @media (max-width: 768px) {
     .data-row {
@@ -218,4 +220,13 @@ h2 {
         text-align: right; /* Mantiene el texto a la derecha */
         flex-basis: 60%;
     }
+}
+
+/* Estilos para los iconos de "Sí" o "No" */
+.checkmark, .cross {
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: center; /* Alineación vertical estándar */
+    margin-left: 5px; /* Espacio entre el texto y el ícono */
+    margin-top: -2px; /* Ajuste hacia arriba para centrar mejor los íconos */
 }
