@@ -227,6 +227,6 @@ h2 {
     font-size: 24px;
     font-weight: bold;
     vertical-align: center; /* Alineación vertical estándar */
-    margin-left: 5px; /* Espacio entre el texto y el ícono */
+    margin-left: 25px; /* Espacio entre el texto y el ícono */
     margin-top: -2px; /* Ajuste hacia arriba para centrar mejor los íconos */
 }
