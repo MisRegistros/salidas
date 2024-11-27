@@ -8,12 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <!-- Título y flecha de navegación -->
+        <!-- Título y mes actual (Diciembre) -->
         <h1>Registro de Salidas</h1>
-        <h2>Diciembre</h2>
-        <a href="index2.html" class="arrow-link">
-            <span class="arrow">&#8594;</span> Enero
-        </a>
+        <h2 class="center">Diciembre</h2>
         
         <div class="calendar">
             <!-- Generación de los 30 días -->
@@ -47,6 +44,11 @@
             <div class="day" onclick="abrirModal(28)">28</div>
             <div class="day" onclick="abrirModal(29)">29</div>
             <div class="day" onclick="abrirModal(30)">30</div>
+        </div>
+
+        <!-- Flecha y mes siguiente -->
+        <div class="next-month">
+            <span>Enero</span> <a href="index2.html" class="arrow-link">&#8594;</a>
         </div>
     </div>
 

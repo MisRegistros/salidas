@@ -26,28 +26,10 @@ h1 {
     margin-bottom: 5px;
 }
 
-h2 {
+.center {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-}
-
-.arrow-link {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.arrow-link .arrow {
-    font-size: 24px;
-    margin-right: 5px;
-}
-
-.arrow-link:hover {
-    text-decoration: underline;
 }
 
 .calendar {
@@ -90,7 +72,7 @@ h2 {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 70%; /* Estrechar la ventana modal */
+    width: 60%; /* Modal más estrecha */
     max-width: 500px;
     border-radius: 8px;
     position: relative;
@@ -140,7 +122,7 @@ h2 {
     }
 
     .modal-content {
-        width: 90%;
+        width: 80%;
     }
 
     .close {
@@ -148,4 +130,27 @@ h2 {
         right: 10px;
         top: 5px;
     }
+}
+
+/* Estilos para la flecha de navegación */
+.next-month {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.next-month span {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.arrow-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.arrow-link:hover {
+    text-decoration: underline;
 }
