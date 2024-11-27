@@ -5,7 +5,7 @@ body {
     color: #fff; /* Texto blanco */
     margin: 0;
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño de los elementos */
+    box-sizing: border-box;
 }
 
 .container {
@@ -23,6 +23,7 @@ h1 {
     color: #fff; /* Título en blanco */
 }
 
+/* Diseño del calendario */
 .calendar-list {
     list-style-type: none;
     padding: 0;
@@ -35,51 +36,50 @@ h1 {
     padding: 10px;
     text-align: center;
     display: flex;
-    justify-content: space-between; /* Distribuir los items de manera uniforme */
+    justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .calendar-header .header-item {
-    flex-grow: 1; /* Hace que los elementos se distribuyan equitativamente */
+    flex: 1;
     text-align: center;
     padding: 0 10px;
-    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
-    color: #fff; /* Texto blanco */
-    margin-bottom: 5px; /* Para que se vea más separado en móviles */
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 10px; /* Espacio entre elementos en móviles */
 }
 
 /* Estilo para los días */
 .calendar-item {
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del ancho */
-    border-bottom: 1px solid #555; /* Borde más oscuro */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #555;
     padding: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en pantallas pequeñas */
 }
 
 .day {
-    width: 60px;
+    width: 100%;  /* En pantallas pequeñas los días ocuparán todo el ancho */
     font-weight: bold;
     text-align: left;
+    color: #fff;
     padding-left: 10px;
-    color: #fff; /* Día en blanco */
-    margin-bottom: 5px; /* Para mejorar la separación en pantallas pequeñas */
+    margin-bottom: 10px; /* Espacio entre los días */
 }
 
 .status-icons {
     display: flex;
-    gap: 10px;
     justify-content: center;
-    width: 100px;
+    width: 100%;
 }
 
 .icon {
     cursor: pointer;
     font-size: 1.5em;
-    color: #fff; /* Iconos en blanco */
+    color: #fff;
     transition: color 0.3s;
+    margin: 0 10px;
 }
 
 .icon.tick.active {
@@ -95,112 +95,100 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px; /* Mejora la separación */
+    margin-bottom: 10px;
 }
 
 .calendar-item .field textarea,
 .calendar-item .field input {
-    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
-    padding: 10px; /* Padding más cómodo */
-    border: 1px solid #ccc; /* Borde visible */
-    background-color: #333; /* Fondo gris oscuro */
-    color: #fff; /* Texto blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de texto adecuado */
-    resize: none; /* Desactivar el redimensionado manual */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
     text-align: center;
 }
 
 .calendar-item .field textarea {
-    height: 35px; /* Ajustar la altura para los comentarios */
+    height: 35px;
 }
 
-.calendar-item .field input {
-    font-weight: bold; /* Texto en negrita */
-    word-wrap: break-word; /* Permite que las palabras largas se dividan */
-    overflow-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
-    white-space: normal; /* Permite que el texto se ajuste y baje de línea */
+.calendar-item .field:nth-child(2) input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
 }
 
-/* Media query para pantallas pequeñas (móviles) */
+.calendar-item .field:nth-child(5) textarea {
+    width: 100%;
+    max-height: 100px;
+}
+
+.calendar-item .field:nth-child(6) input {
+    width: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
 @media screen and (max-width: 768px) {
-
+    /* Hacemos que los encabezados se apilen verticalmente */
     .calendar-header {
-        flex-direction: column; /* Coloca los encabezados uno debajo del otro en móviles */
-        text-align: left; /* Alineación del texto hacia la izquierda */
+        flex-direction: column;
     }
 
-    .calendar-header .header-item {
-        width: 100%; /* Hace que los encabezados ocupen todo el ancho */
-        text-align: left; /* Alineación del texto a la izquierda */
-        margin-bottom: 10px;
-    }
-
+    /* Aseguramos que los días se acomoden bien en pantallas pequeñas */
     .calendar-item {
-        flex-direction: column; /* Pone los elementos de cada día en columna */
-        align-items: flex-start; /* Alinea los elementos a la izquierda */
+        flex-direction: column;
     }
 
-    .day {
-        width: auto;
-        font-size: 14px; /* Reduce el tamaño del texto en móviles */
-        margin-bottom: 10px; /* Espacio entre los días */
-    }
-
-    .status-icons {
-        width: auto;
-        justify-content: flex-start; /* Alinea los íconos a la izquierda */
-    }
-
+    /* Ajustamos el tamaño de los campos de texto */
     .calendar-item .field textarea,
     .calendar-item .field input {
-        width: 100%;  /* Hace que los campos de texto ocupen todo el ancho disponible */
-        padding: 8px; /* Ajuste de padding para pantallas pequeñas */
-    }
-
-    .calendar-item .field:nth-child(2) input {
-        width: 100%;  /* Ajusta la caja para móviles */
-    }
-
-    .calendar-item .field:nth-child(5) textarea {
-        width: 100%;  /* Ajusta la caja para móviles */
-        height: auto;
-        max-height: 150px; /* Máxima altura para comentarios */
-    }
-
-    /* Hacer los botones más pequeños en móviles */
-    .icon {
-        font-size: 1.2em; /* Reduce el tamaño de los íconos en pantallas pequeñas */
-    }
-
-    .container {
-        padding: 15px; /* Reduce el padding del contenedor en móviles */
-    }
-}
-
-/* Media query para pantallas más pequeñas (dispositivos de menos de 500px) */
-@media screen and (max-width: 500px) {
-    h1 {
-        font-size: 18px; /* Reduce el tamaño del título en pantallas más pequeñas */
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
     }
 
     .calendar-item .day {
-        font-size: 12px; /* Ajusta el tamaño de texto del día */
-    }
-
-    .calendar-header .header-item {
-        font-size: 14px; /* Ajusta el tamaño del texto en los encabezados */
-    }
-
-    .calendar-item .field textarea {
-        font-size: 12px; /* Reduce el tamaño del texto en los comentarios */
-    }
-
-    .calendar-item .field input {
-        font-size: 12px; /* Reduce el tamaño del texto en las entradas */
+        width: 100%;
+        font-size: 14px;
+        padding: 5px 0;
+        text-align: left;
     }
 
     .icon {
-        font-size: 1em; /* Ajusta el tamaño de los íconos para pantallas pequeñas */
+        font-size: 1.2em; /* Reduce los íconos */
+    }
+
+    /* Ajustes para las palabras como '¿Salida?', '¿Dónde?' */
+    .header-item {
+        font-size: 14px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    /* Ajustes adicionales para pantallas más pequeñas (menos de 500px) */
+    @media screen and (max-width: 500px) {
+        h1 {
+            font-size: 18px;
+        }
+
+        .calendar-item .day {
+            font-size: 12px;
+        }
+
+        .calendar-item .field textarea,
+        .calendar-item .field input {
+            font-size: 12px; /* Reducir el tamaño del texto */
+            padding: 8px;
+        }
+
+        .icon {
+            font-size: 1em; /* Reducir aún más el tamaño de los íconos */
+        }
     }
 }
