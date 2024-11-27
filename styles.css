@@ -95,7 +95,7 @@ h1 {
 /* Estilo para los comentarios */
 .calendar-item .field textarea {
     width: 100%;  /* Asegura que ocupe todo el ancho disponible */
-    height: 40px; /* Aumentar la altura para los comentarios */
+    height: 35px; /* Aumentar la altura para los comentarios */
     padding: 10px; /* Padding más cómodo */
     border: 1px solid #ccc; /* Borde visible */
     background-color: #333; /* Fondo gris oscuro */
@@ -114,12 +114,22 @@ h1 {
     background-color: #333; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     font-size: 14px;
-    
     font-weight: bold; /* Texto en negrita */
     word-wrap: break-word; /* Permite que las palabras largas se dividan */
     overflow-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
     white-space: normal; /* Permite que el texto se ajuste y baje de línea */
     resize: none; /* Desactivar el redimensionado manual */
+}
+
+
+.calendar-item .field:nth-child(2) input {
+    width: 150px;  /* Cambiar el tamaño a un cuadro más pequeño */
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;  /* Centrar el texto */
+    color: #333;
 }
 
 .calendar-item .field:nth-child(5) textarea {
