@@ -41,14 +41,16 @@ function abrirModal(dia) {
     const diaDatos = datos[dia - 1];
 
     // Actualizar los detalles en el modal con íconos en Salida y Acompañado
-    document.getElementById("salida").innerHTML = diaDatos.salida === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
-    document.getElementById("acompanado").innerHTML = diaDatos.acompanado === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>';
+    // Si 'salida' o 'acompanado' están vacíos, no mostrar ni el tick ni la cruz
+    document.getElementById("salida").innerHTML = diaDatos.salida ? (diaDatos.salida === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>') : '';
+    document.getElementById("acompanado").innerHTML = diaDatos.acompanado ? (diaDatos.acompanado === "Sí" ? '<span class="checkmark">&#10003;</span>' : '<span class="cross">&#10007;</span>') : '';
 
-    // Los demás campos mostrarán texto normal
-    document.getElementById("donde").textContent = diaDatos.donde;
-    document.getElementById("comentarios").textContent = diaDatos.comentarios;
-    document.getElementById("valoracion").textContent = diaDatos.valoracion;
+    // Los demás campos mostrarán texto normal (vacío si no hay datos)
+    document.getElementById("donde").textContent = diaDatos.donde || '';
+    document.getElementById("comentarios").textContent = diaDatos.comentarios || '';
+    document.getElementById("valoracion").textContent = diaDatos.valoracion || '';
 }
+
 
 // Función para cerrar el modal
 function cerrarModal() {
