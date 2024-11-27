@@ -9,42 +9,41 @@
 <body>
     <div class="container">
         <h1>Calendario de Actividades</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Día</th>
-                    <th>¿Salida?</th>
-                    <th>¿Dónde?</th>
-                    <th>¿Acompañado?</th>
-                    <th>Comentarios</th>
-                    <th>Valoración</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Día 1 -->
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" id="salida1" placeholder="Sí/No"></td>
-                    <td><input type="text" id="donde1" placeholder="Paseo/Trabajo"></td>
-                    <td><input type="text" id="acompanado1" placeholder="Sí/No"></td>
-                    <td><input type="text" id="comentarios1" placeholder="Comentarios"></td>
-                    <td><input type="number" id="valoracion1" min="1" max="10" placeholder="Valoración"></td>
-                </tr>
-                <!-- Día 2 -->
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" id="salida2" placeholder="Sí/No"></td>
-                    <td><input type="text" id="donde2" placeholder="Paseo/Trabajo"></td>
-                    <td><input type="text" id="acompanado2" placeholder="Sí/No"></td>
-                    <td><input type="text" id="comentarios2" placeholder="Comentarios"></td>
-                    <td><input type="number" id="valoracion2" min="1" max="10" placeholder="Valoración"></td>
-                </tr>
-                <!-- Día 3 -->
-                <!-- Puedes seguir añadiendo días de la misma forma -->
-            </tbody>
-        </table>
+        <div class="calendar">
+            <!-- Generación de los 30 días -->
+            <div class="day" onclick="abrirModal(1)">1</div>
+            <div class="day" onclick="abrirModal(2)">2</div>
+            <div class="day" onclick="abrirModal(3)">3</div>
+            <div class="day" onclick="abrirModal(4)">4</div>
+            <div class="day" onclick="abrirModal(5)">5</div>
+            <div class="day" onclick="abrirModal(6)">6</div>
+            <div class="day" onclick="abrirModal(7)">7</div>
+            <div class="day" onclick="abrirModal(8)">8</div>
+            <div class="day" onclick="abrirModal(9)">9</div>
+            <div class="day" onclick="abrirModal(10)">10</div>
+            <!-- Repite este bloque hasta el día 30 -->
+        </div>
+    </div>
 
-        <button onclick="guardarDatos()">Guardar</button>
+    <!-- Modal para mostrar los detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Detalles del Día <span id="modal-dia">1</span></h2>
+            <form id="form-datos">
+                <label for="salida">¿Salida?</label>
+                <input type="text" id="salida" placeholder="Sí/No">
+                <label for="acompanado">¿Acompañado?</label>
+                <input type="text" id="acompanado" placeholder="Sí/No">
+                <label for="donde">¿Dónde?</label>
+                <input type="text" id="donde" placeholder="Paseo/Trabajo">
+                <label for="comentarios">Comentarios</label>
+                <input type="text" id="comentarios" placeholder="Comentarios">
+                <label for="valoracion">Valoración</label>
+                <input type="number" id="valoracion" min="1" max="10" placeholder="Valoración">
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -1,18 +1,25 @@
 // script.js
-function guardarDatos() {
-    for (let i = 1; i <= 30; i++) {
-        let salida = document.getElementById(`salida${i}`).value;
-        let donde = document.getElementById(`donde${i}`).value;
-        let acompanado = document.getElementById(`acompanado${i}`).value;
-        let comentarios = document.getElementById(`comentarios${i}`).value;
-        let valoracion = document.getElementById(`valoracion${i}`).value;
+function abrirModal(dia) {
+    // Mostrar el modal y actualizar el título
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-dia").textContent = dia;
 
-        console.log(`Día ${i}:`);
-        console.log(`Salida: ${salida}`);
-        console.log(`Dónde: ${donde}`);
-        console.log(`Acompañado: ${acompanado}`);
-        console.log(`Comentarios: ${comentarios}`);
-        console.log(`Valoración: ${valoracion}`);
-    }
+    // Rellenar el formulario con datos predeterminados para el día
+    document.getElementById("salida").value = ''; // Aquí puedes poner datos predeterminados
+    document.getElementById("acompanado").value = '';
+    document.getElementById("donde").value = '';
+    document.getElementById("comentarios").value = '';
+    document.getElementById("valoracion").value = '';
 }
 
+// Cerrar el modal
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+// Prevenir que se recargue la página al enviar el formulario
+document.getElementById("form-datos").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Datos guardados correctamente");
+    cerrarModal();
+});
