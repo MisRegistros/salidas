@@ -62,7 +62,7 @@ function marcarDias() {
 function abrirModal(dia) {
     // Mostrar el modal y actualizar el título
     document.getElementById("modal").style.display = "block";
-    document.getElementById("modal-dia").textContent = "Detalles del día " + dia;
+    document.getElementById("modal-dia").textContent = "" + dia;
 
     // Obtener los datos del día seleccionado
     const diaDatos = datos[dia - 1];
