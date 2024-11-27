@@ -1,13 +1,36 @@
 // Datos de ejemplo para cada día
 const datos = [
-    { salida: "Sí", acompanado: "Si", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "" },
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },
-    // Añadir más días si es necesario
+  { salida: "Sí", acompanado: "No", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "10" },  // Día 1
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 2
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 3
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 4
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 5
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 6
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 7
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 8
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 9
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 10
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 11
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 12
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 13
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 14
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 15
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 16
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 17
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 18
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 19
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 20
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 21
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 22
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 23
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 24
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 25
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 26
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 27
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 28
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 29
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" }   // Día 30
 ];
-
 // Función para marcar los días con o sin datos
 function marcarDias() {
     const dias = document.querySelectorAll('.day');
