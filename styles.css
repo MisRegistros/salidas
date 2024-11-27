@@ -23,7 +23,31 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
     margin-bottom: 20px;
+}
+
+.arrow-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.arrow-link .arrow {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.arrow-link:hover {
+    text-decoration: underline;
 }
 
 .calendar {
@@ -66,7 +90,7 @@ h1 {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 70%; /* Estrechar la ventana modal */
     max-width: 500px;
     border-radius: 8px;
     position: relative;
