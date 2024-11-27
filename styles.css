@@ -1,208 +1,63 @@
-/* Estilos globales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+/* styles.css */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
 .container {
-    max-width: 1000px;
-    margin: auto;
-    background-color: #333; /* Fondo gris oscuro para el contenedor */
-    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra más oscura */
 }
 
 h1 {
     text-align: center;
+    color: #333;
     margin-bottom: 20px;
-    color: #fff; /* Título en blanco */
 }
 
-/* Diseño del calendario */
-.calendar-list {
-    list-style-type: none;
-    padding: 0;
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-.calendar-header {
-    font-weight: bold;
-    background-color: #444; /* Fondo oscuro para el encabezado */
+table th, table td {
     padding: 10px;
+    border: 1px solid #ddd;
     text-align: center;
-    display: grid;  /* Usamos Grid para una mejor distribución */
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-    gap: 10px;
 }
 
-.calendar-header .header-item {
-    text-align: center;
+input {
+    width: 90%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    color: #fff;
-    font-size: 14px;  /* Tamaño más pequeño para móviles */
 }
 
-.calendar-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 columnas */
-    gap: 10px;
-    border-bottom: 1px solid #555;
-    padding: 10px;
-}
-
-.day {
-    width: 100%;
-    font-weight: bold;
-    text-align: left;
-    color: #fff;
-    padding-left: 10px;
-}
-
-.status-icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.icon {
-    cursor: pointer;
-    font-size: 1.5em;
-    color: #fff;
-    transition: color 0.3s;
-    margin: 0 10px;
-}
-
-.icon.tick.active {
-    color: green;
-}
-
-.icon.cross.active {
-    color: red;
-}
-
-.field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Campos de entrada y texto */
-.calendar-item .field textarea,
-.calendar-item .field input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 14px;
-    resize: none;
-    text-align: center;
-}
-
-.calendar-item .field textarea {
-    height: 35px;
-}
-
-.calendar-item .field:nth-child(2) input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-}
-
-.calendar-item .field:nth-child(5) textarea {
-    width: 100%;
-    max-height: 100px;
-}
-
-.calendar-item .field:nth-child(6) input {
-    width: 50px;
-    padding: 10px;
-    font-size: 20px;
-}
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media screen and (max-width: 768px) {
-    /* Reorganizamos el calendario para pantallas pequeñas */
-    .calendar-header {
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas para los encabezados */
-    }
-
-    .calendar-item {
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas para el contenido */
-    }
-
-    /* Ajustamos el tamaño de los campos de texto */
-    .calendar-item .field textarea,
-    .calendar-item .field input {
-        width: 100%;
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    .calendar-item .day {
-        width: 100%;
-        font-size: 12px;
-        padding: 5px 0;
-        text-align: left;
-    }
-
-    .icon {
-        font-size: 1.2em; /* Reducir los íconos */
-    }
-
-    .header-item {
-        font-size: 12px; /* Reducir el tamaño del texto */
-        width: 100%;
-        text-align: left;
-        margin-bottom: 5px;
-    }
-
-    .calendar-item .field textarea {
-        height: 30px; /* Reducir la altura de los campos */
-    }
-
-    .calendar-item .field input {
-        font-size: 12px; /* Reducir tamaño de texto */
-    }
-
-    .calendar-item .field:nth-child(6) input {
-        font-size: 16px; /* Reducir tamaño de los números */
-    }
-
-    h1 {
-        font-size: 16px;
-    }
-}
-
-/* Ajustes adicionales para pantallas más pequeñas (menos de 500px) */
-@media screen and (max-width: 500px) {
-    /* Menor tamaño de los íconos y las fuentes */
-    .icon {
-        font-size: 1em;
-    }
-
-    .calendar-item .field textarea,
-    .calendar-item .field input {
-        font-size: 10px;
-        padding: 5px;
-    }
-
-    .calendar-item .day {
-        font-size: 10px;
-    }
-
-    .calendar-header .header-item {
-        font-size: 10px;
-    }
-
-    h1 {
-        font-size: 14px;
-    }
+button:hover {
+    background-color: #45a049;
 }
