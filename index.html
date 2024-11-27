@@ -1,1 +1,211 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro salidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro salidas Diciembre</h1>
+        <ul class="calendar-list">
+            <!-- Encabezado de la lista -->
+<li class="calendar-header">
+    <span class="header-item salida">¿Salida?</span>
+    <span class="header-item donde">¿Dónde?</span>
+    <span class="header-item acompanado">¿Acompañado?</span>
+    <span class="header-item comentarios">Comentarios</span>
+    <span class="header-item valoracion">Valoración</span>
+</li>
+
+            <!-- Generar 30 días de la lista -->
+            <script>
+    for (let i = 1; i <= 30; i++) {
+    let texto = "";
+    let comentarios = "";
+    let valoracion = "";
+
+    // Asignar valores vacíos o personalizados a cada día
+    if (i === 1) {
+        texto = "Paseo a tus muertooooooos";
+        comentarios = "me fui a comprar al chino y luego tire la basuraaaaaaaaaaaaaaaaaaaaaaaaaa";
+        valoracion = "7";
+    }
+    if (i === 2) {
+        texto = "paseo";
+        comentarios = "anda";
+        valoracion = "";
+    }
+    if (i === 3) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 4) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 5) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 6) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 7) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 8) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 9) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 10) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 11) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 12) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 13) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 14) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 15) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 16) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 17) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 18) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 19) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 20) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 21) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 22) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 23) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 24) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 25) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 26) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 27) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 28) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 29) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+    if (i === 30) {
+        texto = "";
+        comentarios = "";
+        valoracion = "";
+    }
+
+    document.write(`
+        <li class="calendar-item">
+            <span class="day">Día ${i}</span>
+            <div class="status-icons">
+                <span class="icon tick" onclick="toggleStatus(this, 'tick')">✔️</span>
+                <span class="icon cross" onclick="toggleStatus(this, 'cross')">❌</span>
+            </div>
+            <div class="field">
+<textarea id="texto-${i}" readonly>${texto}</textarea> <!-- Texto vacío para cada día -->
+            </div>
+            <div class="status-icons">
+                <span class="icon tick" onclick="toggleStatus(this, 'tick')">✔️</span>
+                <span class="icon cross" onclick="toggleStatus(this, 'cross')">❌</span>
+            </div>
+            <div class="field">
+<textarea id="comentarios-${i}" readonly>${comentarios}</textarea> <!-- Comentarios vacíos para cada día -->
+            </div>
+            <div class="field small-input">
+                <input type="number" id="valoracion-${i}" value="${valoracion}" readonly /> <!-- Comentarios vacíos para cada día -->
+            </div>
+        </li>
+    `);
+}
+
+</script>
+
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
