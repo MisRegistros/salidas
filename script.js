@@ -39,8 +39,11 @@ function marcarDias() {
     dias.forEach(dia => {
         const numeroDia = parseInt(dia.textContent); // Obtenemos el número del día
 
-        // Verificamos si ese día tiene datos
-        const tieneDatos = datos[numeroDia - 1]; // Obtiene el objeto correspondiente al día
+        // Obtener el objeto correspondiente al día
+        const diaDatos = datos[numeroDia - 1];
+
+        // Verificar si todas las propiedades del objeto están vacías
+        const tieneDatos = diaDatos.salida || diaDatos.acompanado || diaDatos.donde || diaDatos.comentarios || diaDatos.valoracion;
 
         if (tieneDatos) {
             // Si tiene datos, agregar la clase para el color verde
@@ -53,6 +56,7 @@ function marcarDias() {
         }
     });
 }
+
 
 // Función para actualizar la información en el modal
 function abrirModal(dia) {
