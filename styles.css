@@ -31,6 +31,7 @@ h1 {
     grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
     gap: 5px;
     margin-bottom: 20px;
+    padding: 0 10px; /* Añadir padding para móviles */
 }
 
 .day {
@@ -57,57 +58,70 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 20px;
-    border-radius: 8px;
+    border: 1px solid #888;
     width: 80%;
     max-width: 500px;
-    position: relative; /* Añadido para el botón de cierre */
+    border-radius: 8px;
+    position: relative;
 }
 
 .close {
     color: #aaa;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
-    position: absolute; /* Posición fija dentro del modal */
-    right: 20px;
+    position: absolute;
     top: 10px;
+    right: 20px;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
-form {
+.data-row {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-label {
-    margin-top: 10px;
-    font-size: 14px;
+.label {
+    font-weight: bold;
+    flex-basis: 40%;
 }
 
-input {
-    margin-top: 5px;
-    padding: 8px;
-    font-size: 14px;
-    border: none; /* Sin borde */
-    border-bottom: 1px solid #ddd; /* Línea inferior */
-    outline: none; /* Sin contorno al hacer foco */
-    background-color: transparent; /* Fondo transparente */
-    color: #333; /* Color del texto */
+.value {
+    flex-basis: 60%;
+    color: #333;
+    margin-left: 10px;
 }
 
-input::placeholder {
-    color: #aaa; /* Color del texto de los placeholders */
+h2 {
+    margin-bottom: 20px; /* Añadido margen para separar el título de los datos */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .calendar {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para móviles */
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 25px;
+        right: 10px;
+        top: 5px;
+    }
 }

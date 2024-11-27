@@ -22,11 +22,11 @@ function abrirModal(dia) {
     const diaDatos = datos[dia - 1] || {};
 
     // Actualizar los detalles en el modal, dejando vacío si no hay datos
-    document.getElementById("salida").value = diaDatos.salida || "";
-    document.getElementById("acompanado").value = diaDatos.acompanado || "";
-    document.getElementById("donde").value = diaDatos.donde || "";
-    document.getElementById("comentarios").value = diaDatos.comentarios || "";
-    document.getElementById("valoracion").value = diaDatos.valoracion || "";
+    document.getElementById("salida").textContent = diaDatos.salida || "";
+    document.getElementById("acompanado").textContent = diaDatos.acompanado || "";
+    document.getElementById("donde").textContent = diaDatos.donde || "";
+    document.getElementById("comentarios").textContent = diaDatos.comentarios || "";
+    document.getElementById("valoracion").textContent = diaDatos.valoracion || "";
 }
 
 function cerrarModal() {

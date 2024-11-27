@@ -49,18 +49,29 @@
         <div class="modal-content">
             <span class="close" onclick="cerrarModal()">&times;</span>
             <h2>Detalles del Día <span id="modal-dia">1</span></h2>
-            <form id="form-datos">
-                <label for="salida">¿Salida?</label>
-                <input type="text" id="salida">
-                <label for="acompanado">¿Acompañado?</label>
-                <input type="text" id="acompanado">
-                <label for="donde">¿Dónde?</label>
-                <input type="text" id="donde">
-                <label for="comentarios">Comentarios</label>
-                <input type="text" id="comentarios">
-                <label for="valoracion">Valoración</label>
-                <input type="number" id="valoracion" min="1" max="10">
-            </form>
+            <div id="form-datos">
+                <!-- Mostrar los datos como preguntas-respuestas -->
+                <div class="data-row">
+                    <div class="label">¿Salida?</div>
+                    <div class="value" id="salida"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">¿Acompañado?</div>
+                    <div class="value" id="acompanado"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">¿Dónde?</div>
+                    <div class="value" id="donde"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">¿Comentarios?</div>
+                    <div class="value" id="comentarios"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">¿Valoración?</div>
+                    <div class="value" id="valoracion"></div>
+                </div>
+            </div>
         </div>
     </div>
 
