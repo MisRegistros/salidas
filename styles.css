@@ -245,3 +245,17 @@ h2 {
     margin-left: 45px; /* Espacio entre el texto y el ícono */
     margin-top: -2px; /* Ajuste hacia arriba para centrar mejor los íconos */
 }
+
+
+/* Color de los días con información (verde) */
+.day-con-datos {
+    background-color: green; /* Fondo verde */
+    color: white; /* Texto blanco */
+}
+
+/* Color de los días sin información (rojo) */
+.day-sin-datos {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+}
+
