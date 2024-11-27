@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Salidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título y mes actual (Diciembre) -->
+        <h1>Registro de Salidas</h1>
+        <h2 class="center">Enero</h2>
+        
+        <div class="calendar">
+            <!-- Generación de los 30 días -->
+            <div class="day" onclick="abrirModal(1)">1</div>
+            <div class="day" onclick="abrirModal(2)">2</div>
+            <div class="day" onclick="abrirModal(3)">3</div>
+            <div class="day" onclick="abrirModal(4)">4</div>
+            <div class="day" onclick="abrirModal(5)">5</div>
+            <div class="day" onclick="abrirModal(6)">6</div>
+            <div class="day" onclick="abrirModal(7)">7</div>
+            <div class="day" onclick="abrirModal(8)">8</div>
+            <div class="day" onclick="abrirModal(9)">9</div>
+            <div class="day" onclick="abrirModal(10)">10</div>
+            <div class="day" onclick="abrirModal(11)">11</div>
+            <div class="day" onclick="abrirModal(12)">12</div>
+            <div class="day" onclick="abrirModal(13)">13</div>
+            <div class="day" onclick="abrirModal(14)">14</div>
+            <div class="day" onclick="abrirModal(15)">15</div>
+            <div class="day" onclick="abrirModal(16)">16</div>
+            <div class="day" onclick="abrirModal(17)">17</div>
+            <div class="day" onclick="abrirModal(18)">18</div>
+            <div class="day" onclick="abrirModal(19)">19</div>
+            <div class="day" onclick="abrirModal(20)">20</div>
+            <div class="day" onclick="abrirModal(21)">21</div>
+            <div class="day" onclick="abrirModal(22)">22</div>
+            <div class="day" onclick="abrirModal(23)">23</div>
+            <div class="day" onclick="abrirModal(24)">24</div>
+            <div class="day" onclick="abrirModal(25)">25</div>
+            <div class="day" onclick="abrirModal(26)">26</div>
+            <div class="day" onclick="abrirModal(27)">27</div>
+            <div class="day" onclick="abrirModal(28)">28</div>
+            <div class="day" onclick="abrirModal(29)">29</div>
+            <div class="day" onclick="abrirModal(30)">30</div>
+        </div>
+
+        <!-- Flecha y mes siguiente -->
+<div class="month-navigation">
+    <!-- Flecha de mes anterior (Diciembre) -->
+    <div class="previous-month">
+        <span>Diciembre</span> <a href="index.html" class="arrow-link">&#8592;</a>
+    </div>
+    
+    <!-- Flecha de mes siguiente (Enero) -->
+    <div class="next-month">
+        <span>Febrero</span> <a href="febrero.html" class="arrow-link">&#8594;</a>
+    </div>
+</div>
+
+    <!-- Modal para mostrar los detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Detalles del Día <span id="modal-dia">1</span></h2>
+            <div id="form-datos">
+                <!-- Mostrar los datos como preguntas-respuestas -->
+                <div class="data-row">
+                    <div class="label">¿Salida? : </div>
+                    <div class="value" id="salida"></div> <!-- Aquí se mostrará el ícono -->
+                </div>
+                <div class="data-row">
+                    <div class="label">¿Acompañado? : </div>
+                    <div class="value" id="acompanado"></div> <!-- Aquí se mostrará el ícono -->
+                </div>
+
+                <div class="data-row">
+                    <div class="label">¿Dónde? :</div>
+                    <div class="value" id="donde"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">Comentarios :</div>
+                    <div class="value" id="comentarios"></div>
+                </div>
+                <div class="data-row">
+                    <div class="label">Valoración :</div>
+                    <div class="value" id="valoracion"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptenero.js"></script>
+</body>
+</html>
