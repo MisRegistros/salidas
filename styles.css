@@ -35,37 +35,32 @@ h1 {
     background-color: #444; /* Fondo oscuro para el encabezado */
     padding: 10px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
+    display: grid;  /* Usamos Grid para una mejor distribución */
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 10px;
 }
 
 .calendar-header .header-item {
-    flex: 1;
     text-align: center;
-    padding: 0 10px;
     cursor: pointer;
     color: #fff;
-    margin-bottom: 10px; /* Espacio entre elementos en móviles */
+    font-size: 14px;  /* Tamaño más pequeño para móviles */
 }
 
-/* Estilo para los días */
 .calendar-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 columnas */
+    gap: 10px;
     border-bottom: 1px solid #555;
     padding: 10px;
 }
 
 .day {
-    width: 100%;  /* En pantallas pequeñas los días ocuparán todo el ancho */
+    width: 100%;
     font-weight: bold;
     text-align: left;
     color: #fff;
     padding-left: 10px;
-    margin-bottom: 10px; /* Espacio entre los días */
 }
 
 .status-icons {
@@ -91,13 +86,13 @@ h1 {
 }
 
 .field {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
 
+/* Campos de entrada y texto */
 .calendar-item .field textarea,
 .calendar-item .field input {
     width: 100%;
@@ -134,14 +129,13 @@ h1 {
 
 /* Ajustes para pantallas pequeñas (móviles) */
 @media screen and (max-width: 768px) {
-    /* Hacemos que los encabezados se apilen verticalmente */
+    /* Reorganizamos el calendario para pantallas pequeñas */
     .calendar-header {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas para los encabezados */
     }
 
-    /* Aseguramos que los días se acomoden bien en pantallas pequeñas */
     .calendar-item {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas para el contenido */
     }
 
     /* Ajustamos el tamaño de los campos de texto */
@@ -149,46 +143,66 @@ h1 {
     .calendar-item .field input {
         width: 100%;
         padding: 8px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .calendar-item .day {
         width: 100%;
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px 0;
         text-align: left;
     }
 
     .icon {
-        font-size: 1.2em; /* Reduce los íconos */
+        font-size: 1.2em; /* Reducir los íconos */
     }
 
-    /* Ajustes para las palabras como '¿Salida?', '¿Dónde?' */
     .header-item {
-        font-size: 14px;
+        font-size: 12px; /* Reducir el tamaño del texto */
         width: 100%;
         text-align: left;
         margin-bottom: 5px;
     }
 
-    /* Ajustes adicionales para pantallas más pequeñas (menos de 500px) */
-    @media screen and (max-width: 500px) {
-        h1 {
-            font-size: 18px;
-        }
+    .calendar-item .field textarea {
+        height: 30px; /* Reducir la altura de los campos */
+    }
 
-        .calendar-item .day {
-            font-size: 12px;
-        }
+    .calendar-item .field input {
+        font-size: 12px; /* Reducir tamaño de texto */
+    }
 
-        .calendar-item .field textarea,
-        .calendar-item .field input {
-            font-size: 12px; /* Reducir el tamaño del texto */
-            padding: 8px;
-        }
+    .calendar-item .field:nth-child(6) input {
+        font-size: 16px; /* Reducir tamaño de los números */
+    }
 
-        .icon {
-            font-size: 1em; /* Reducir aún más el tamaño de los íconos */
-        }
+    h1 {
+        font-size: 16px;
+    }
+}
+
+/* Ajustes adicionales para pantallas más pequeñas (menos de 500px) */
+@media screen and (max-width: 500px) {
+    /* Menor tamaño de los íconos y las fuentes */
+    .icon {
+        font-size: 1em;
+    }
+
+    .calendar-item .field textarea,
+    .calendar-item .field input {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .calendar-item .day {
+        font-size: 10px;
+    }
+
+    .calendar-header .header-item {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 14px;
     }
 }
