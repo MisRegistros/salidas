@@ -50,7 +50,23 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+
+    /* Evitar selección de texto y búsqueda en Google en móviles */
+    -webkit-touch-callout: none; /* Evitar el menú de búsqueda en Google en móviles */
+    -webkit-user-select: none; /* Deshabilitar la selección de texto en navegadores WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Deshabilitar la selección de texto en Firefox */
+    -ms-user-select: none; /* Deshabilitar la selección de texto en Internet Explorer/Edge */
+    user-select: none; /* Deshabilitar la selección de texto en navegadores modernos */
 }
+
+.day span {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /* Deshabilitar también en los elementos span donde está el número */
+}
+
 
 .day:hover {
     background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
