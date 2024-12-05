@@ -196,7 +196,7 @@ h2 {
     align-items: center;
 }
 
-/* Estilo de las etiquetas */
+/* Estilo de las etiquetas -------*/
 .label {
     font-weight: bold;
     margin-right: 10px; /* Separación entre la etiqueta y el valor */
