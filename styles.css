@@ -251,11 +251,28 @@ h2 {
 .day-con-datos {
     background-color: green; /* Fondo verde */
     color: white; /* Texto blanco */
+    -webkit-user-select: none; /* Evitar la selección de texto en móviles */
+    -moz-user-select: none; /* Evitar la selección de texto en Firefox */
+    -ms-user-select: none; /* Evitar la selección en IE/Edge */
+    user-select: none; /* Evitar la selección de texto en todos los navegadores */
+    cursor: pointer; /* Cursor de pointer */
 }
 
 /* Color de los días sin información (rojo) */
 .day-sin-datos {
     background-color: red; /* Fondo rojo */
     color: white; /* Texto blanco */
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    cursor: pointer;
 }
 
+/* Evitar el cambio visual en el estado activo (cuando se hace clic o toca) */
+.day-con-datos:active, .day-sin-datos:active {
+    background-color: inherit; /* Mantener el mismo fondo */
+    color: inherit; /* Mantener el mismo color de texto */
+    outline: none; /* Evitar cualquier borde de foco al hacer clic */
+    border: none; /* Evitar bordes extra */
+}
