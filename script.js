@@ -1,8 +1,8 @@
 // Datos de ejemplo para cada día
 const datos = [
-  { salida: "Sí", acompanado: "No", donde: "Paseo", comentarios: "Todo fue normal", valoracion: "10" },  // Día 1
+  { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 1
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 2
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 3
+    { salida: "Sí", acompanado: "Sí", donde: "Tirar basura", comentarios: "Todo fue normal", valoracion: "7" },  // Día 3
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 4
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 5
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 6
