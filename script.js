@@ -8,7 +8,7 @@ const datos = [
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 6
     { salida: "Sí", acompanado: "Sí", donde: "Compra Navidad", comentarios: "3 horas, encuentro familia", valoracion: "9.5" },  // Día 7
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 8
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 9
+    { salida: "Sí", acompanado: "Sí", donde: "Tirar basura", comentarios: "Sobre las 23:30", valoracion: "6" },  // Día 9
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 10
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 11
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 12
