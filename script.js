@@ -20,9 +20,9 @@ const datos = [
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 18
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 19
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 20
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 21
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 25
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 22
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 23
+    { salida: "Sí", acompanado: "Sí", donde: "Tirar basura", comentarios: "A las 0:16, todo tranquilo", valoracion: "5" },  // Día 21
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 24
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 25
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 26
