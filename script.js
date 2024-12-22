@@ -12,11 +12,11 @@ const datos = [
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 10
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 11
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 12
-    { salida: "Si", acompanado: "No", donde: "Al portal", comentarios: "A recoger un paquete", valoracion: "10" },  // Día 13
+    { salida: "Sí", acompanado: "No", donde: "Al portal", comentarios: "A recoger un paquete", valoracion: "10" },  // Día 13
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 14
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 15
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 16
-    { salida: "Si", acompanado: "No", donde: "Al portal", comentarios: "Bajé solo, me quedé abajo un rato", valoracion: "10" },  // Día 17
+    { salida: "Sí", acompanado: "No", donde: "Al portal", comentarios: "Bajé solo, me quedé abajo un rato", valoracion: "10" },  // Día 17
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 18
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 19
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 20
