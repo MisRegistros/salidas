@@ -25,7 +25,7 @@ const datos = [
     { salida: "Sí", acompanado: "Sí", donde: "Tirar basura", comentarios: "A las 0:16, todo tranquilo", valoracion: "5" },  // Día 21
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 24
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 25
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 266
+    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 2666
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 27
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 28
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 29
