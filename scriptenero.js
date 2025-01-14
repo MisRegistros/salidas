@@ -1,6 +1,6 @@
 // Datos de ejemplo para cada día Sí o No
 const datos = [
-  { salida: "Sí", acompanado: "No", donde: "", comentarios: "", valoracion: "" },  // Día 1
+  { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 1
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 2
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 3
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 4
@@ -13,7 +13,7 @@ const datos = [
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 11
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 12
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 13
-    { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 14
+    { salida: "Sí", acompanado: "No", donde: "Buzón", comentarios: "a las 5:30AM", valoracion: "9" },  // Día 14
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 15
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 16
     { salida: "", acompanado: "", donde: "", comentarios: "", valoracion: "" },  // Día 17
